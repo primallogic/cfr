@@ -1,0 +1,194 @@
+/*import custom fonts here*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+/*set global styling here*/
+
+:root {
+  /* CSS Reset */
+  html,
+  body,
+  div,
+  span,
+  applet,
+  object,
+  iframe,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  pre,
+  a,
+  abbr,
+  acronym,
+  address,
+  big,
+  cite,
+  code,
+  del,
+  dfn,
+  em,
+  img,
+  ins,
+  kbd,
+  q,
+  s,
+  samp,
+  small,
+  strike,
+  strong,
+  sub,
+  sup,
+  tt,
+  var,
+  b,
+  u,
+  i,
+  center,
+  dl,
+  dt,
+  dd,
+  ol,
+  ul,
+  li,
+  fieldset,
+  form,
+  label,
+  legend,
+  table,
+  caption,
+  tbody,
+  tfoot,
+  thead,
+  tr,
+  th,
+  td,
+  article,
+  aside,
+  canvas,
+  details,
+  embed,
+  figure,
+  figcaption,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  output,
+  ruby,
+  section,
+  summary,
+  time,
+  mark,
+  audio,
+  video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+
+  /* HTML5 display-role reset for older browsers */
+  article,
+  aside,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  section {
+    display: block;
+  }
+
+  body {
+    line-height: 1;
+  }
+
+  ol,
+  ul {
+    list-style: none;
+  }
+
+  blockquote,
+  q {
+    quotes: none;
+  }
+
+  blockquote:before,
+  blockquote:after,
+  q:before,
+  q:after {
+    content: "";
+    content: none;
+  }
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+}
+
+html {
+  background: #000000;
+  background-size: 224px;
+
+  --primaryColor: #000000;
+  --secondaryColor: #ffffff;
+  --complimentaryColor: #50ebff;
+  --neutralDarkGray: #505050;
+  --accentColor: #cccccc;
+  --yellowColor: #ddb908;
+  --blueColor: #20589d;
+  --primaryFontFamily: Roboto, sans-serif;
+  --secondaryFontFamily: Georgia, serif;
+
+  .buttonStyle1 {
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 6px;
+    padding: 0.44rem 1.11rem 0.44rem 20px;
+    color: var(--complimentaryColor);
+    transition: background-color 0.3s ease;
+  }
+
+  .buttonStyle1:hover {
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 6px;
+    padding: 0.44rem 1.11rem 0.44rem 20px;
+    background-color: var(--complimentaryColor);
+    border-color: var(--complimentaryColor);
+    color: var(--primaryColor);
+    transition: background-color 0.3s ease;
+  }
+
+  /*custom scrollbar*/
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--primaryColor);
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--complimentaryColor);
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--complimentaryColor);
+  }
+}

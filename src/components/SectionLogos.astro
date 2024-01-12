@@ -1,0 +1,103 @@
+---
+import bitcoinLogo from "../images/Bitcoin.svg";
+import teslaLogo from "../images/Tesla.svg";
+import nvidiaLogo from "../images/Nvidia.svg";
+import rippleLogo from "../images/Ripple.svg";
+import metaLogo from "../images/Meta.svg";
+import tetherLogo from "../images/Tether.svg";
+import solanaLogo from "../images/Solana.svg";
+import adobeLogo from "../images/Adobe.svg";
+import nftLogo from "../images/Nft.svg";
+import ethereumLogo from "../images/Ethereum.svg";
+import microsoftLogo from "../images/Microsoft.svg";
+
+import "../styles/global.css";
+---
+
+<div id="mainSectionLogosContainer">
+  <div id="headingArea">
+    <h2>Riding the Wave of Top-Tier Digital Wealth Assets!</h2>
+  </div>
+  <div id="innerSectionContainer">
+    <div id="logosRow1">
+      <img class="image" src={teslaLogo.src} width="140px" alt="Tesla logo" />
+      <img class="image" src={bitcoinLogo.src} width="140px" alt="Bitcoin logo" />
+      <img class="image" src={nvidiaLogo.src} width="140px" alt="Nvidia logo" />
+      <img class="image" src={rippleLogo.src} width="140px" alt="Ripple logo" />
+      <img class="image" src={metaLogo.src} width="140px" alt="Meta logo" />
+      <img class="image" src={tetherLogo.src} width="140px" alt="Tether logo" />
+    </div>
+
+    <div id="logosRow2">
+      <img class="image" src={solanaLogo.src} width="140px" alt="Solana logo" />
+      <img class="image" src={adobeLogo.src} width="129.5" alt="Adobe logo" />
+      <img class="image" src={nftLogo.src} width="85px" alt="NFT logo" />
+      <img class="image" src={ethereumLogo.src} width="140px" alt="Ethereum logo" />
+      <img class="image" src={microsoftLogo.src} width="140px" alt="Microsoft logo" />
+    </div>
+  </div>
+
+  <style>
+    /* Extra small devices (phones, 600px and down) */
+    @media only screen and (max-width: 600px) {
+    }
+
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media only screen and (min-width: 600px) {
+    }
+
+    /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (min-width: 768px) {
+    }
+
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 992px) {
+    }
+
+    /*center the complete group of logos*/
+    #mainSectionLogosContainer {
+      background-color: var(--primaryColor);
+      padding-top: 3.61rem;
+      padding-left: 3.56rem;
+      padding-right: 3.56rem;
+      padding-bottom: 3.61rem;
+      
+    }
+
+    #headingArea > h2 {
+      font-family: var(--primaryFontFamily);
+      color: var(--secondaryColor);
+      text-align: center;
+      font-size: 1rem;
+      font-style:normal;
+      font-weight:700;
+      line-height:150%;
+      padding-bottom: 1.33rem;
+      
+    }
+
+    #logosRow1 {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-evenly;
+      padding-bottom: 1.33rem;
+    }
+
+    #logosRow2 {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+
+    #innerSectionContainer {
+      margin:0 auto 0 auto;
+      width: 80%;
+      
+    }
+    
+  </style>
+</div>
