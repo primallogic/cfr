@@ -1,0 +1,259 @@
+---
+interface Props {
+  title: string;
+  preview: string;
+  url: string;
+  category: string;
+  chapters: string;
+  backgroundImage: string;
+}
+
+const { title, preview, url, category, chapters, backgroundImage } =
+  Astro.props;
+
+import nftCourseImage from "../images/nftCourseImage.jpg";
+import "../styles/global.css";
+---
+
+<div id="mainContainer">
+  <div id="leftSide">
+    <img
+      src={backgroundImage}
+      alt={title}
+      style="min-width: 250px; max-width:250px; border-radius:6px; max-height: 223px; "
+      class="zoom-image"
+    />
+  </div>
+  <div id="rightSide">
+    <div id="courseContent" class="column">
+      <div id="infoContainer">
+        <div id="category">{category}</div>
+        <div id="chapters">{chapters} Chapters</div>
+      </div>
+      <div id="contentContainer">
+        <h2>{title}</h2>
+        <p>
+          {preview}
+        </p>
+        <div id="viewMoreContainer">
+          <div id="viewMoreText"><a href={url}>View More</a></div>
+          <div id="viewMoreIcon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="25"
+              viewBox="0 0 24 25"
+              fill="none"
+            >
+              <path
+                d="M9.70703 17.003L15.414 11.296L9.70703 5.58899L8.29303 7.00299L12.586 11.296L8.29303 15.589L9.70703 17.003Z"
+                fill="#50EBFF"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+  }
+
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+  }
+
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+  }
+
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+  }
+
+  #mainContainer {
+    display: flex;
+    padding-bottom: 2.78rem;
+  }
+
+  #leftSide {
+    display: flex;
+    /* min-width: 250px;
+    height: 223px; */
+    /* align-self: stretch; */
+    /* background-image: url("../images/nftCourseImage.jpg"); */
+    /* background-size: cover;
+    background-position: center; */
+    border-radius: 6px;
+    margin-right: 1.33rem;
+    overflow: hidden;
+    position: relative;
+  }
+
+  #rightSide {
+    display: flex;
+  }
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  #courseContent {
+    max-width: 366px;
+    display: flex;
+    flex-direction:;
+    align-items: flex-start;
+  }
+
+  #infoContainer {
+    font-family: var(--primaryFontFamily);
+    color: var(--secondaryColor);
+    display: flex;
+    align-items: center;
+  }
+
+  #category {
+    font-family: var(--primaryFontFamily);
+    color: var(--primaryColor);
+    font-size: 0.78rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    background-color: var(--complimentaryColor);
+    padding: 0.22rem 0.44rem;
+    border-radius: 3px;
+  }
+
+  #chapters {
+    font-family: var(--primaryFontFamily);
+    color: var(--secondaryColor);
+    font-size: 0.78rem;
+    font-style: normal;
+    fot-weight: 600;
+    line-height: 150%;
+    padding-left: 0.89rem;
+  }
+
+  #contentContainer {
+    padding-top: 0.89rem;
+  }
+
+  #contentContainer > h2 {
+    font-family: var(--primaryFontFamily);
+    color: var(--secondaryColor);
+    font-size: 1.33rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+  }
+
+  #contentContainer > p {
+    padding-top: 0.44rem;
+    font-family: var(--primaryFontFamily);
+    color: var(--secondaryColor);
+    font-size: 0.89rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    padding-bottom: 0.75rem;
+  }
+
+  #viewMoreContainer {
+    display: flex;
+    align-items: center; /*Centers content vertically */
+  }
+
+  #viewMoreText {
+    font-family: var(--primaryFontFamily);
+    color: var(--complimentaryColor);
+    gap: 0.44rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    padding-right: 0.44rem;
+    display: flex;
+    align-items: center; /*Centers content vertically */
+    font-size: 0.89rem;
+  }
+
+  #viewMoreText a {
+    font-family: var(--primaryFontFamily);
+    color: var(--complimentaryColor);
+    gap: 0.44rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    padding-right: 0.44rem;
+    display: flex;
+    align-items: center; /*Centers content vertically */
+    font-size: 0.89rem;
+    text-decoration: none;
+  }
+
+  #viewMoreText a:active {
+    font-family: var(--primaryFontFamily);
+    color: var(--complimentaryColor);
+    gap: 0.44rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    padding-right: 0.44rem;
+    display: flex;
+    align-items: center; /*Centers content vertically */
+    font-size: 0.89rem;
+    text-decoration: none;
+  }
+
+  #viewMoreText a:visited {
+    font-family: var(--primaryFontFamily);
+    color: var(--complimentaryColor);
+    gap: 0.44rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    padding-right: 0.44rem;
+    display: flex;
+    align-items: center; /*Centers content vertically */
+    font-size: 0.89rem;
+    text-decoration: none;
+  }
+
+  #viewMoreText a:hover {
+    font-family: var(--primaryFontFamily);
+    color: var(--complimentaryColor);
+    gap: 0.44rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    padding-right: 0.44rem;
+    display: flex;
+    align-items: center; /*Centers content vertically */
+    font-size: 0.89rem;
+    text-decoration: none;
+  }
+
+  #viewMoreIcon {
+    font-family: var(--primaryFontFamily);
+    color: var(--complimentaryColor);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    display: flex;
+    align-items: center; /*Centers content vertically */
+  }
+
+  .zoom-image {
+    width: 100%; /* Set the width as per your requirement */
+    height: auto; /* Maintain the aspect ratio */
+    object-fit: cover; /* Ensure the image covers the area and maintains aspect ratio */
+    transition: transform 0.6s ease; /* Smooth transition for zoom effect */
+  }
+
+  .zoom-image:hover {
+    transform: scale(1.1); /* Zoom in the image by 10% */
+  }
+</style>

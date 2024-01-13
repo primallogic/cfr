@@ -1,0 +1,111 @@
+---
+import FeaturedCourseBlock from "../components/FeaturedCourseBlock.astro";
+import MoreCourseBlocks from "../components/MoreCourseBlocks.astro";
+
+import "../styles/global.css";
+---
+
+<div id="mainSectionCoursesContainer">
+  <div id="headingArea">
+    <h2>Courses</h2>
+    <p>Choose from a variety of courses on Crypto, NFTs, and Stocks.</p>
+  </div>
+  <div id="innerSectionContainer">
+    <div id="featuredCourse">
+      <FeaturedCourseBlock
+        title="Blockchain Crash Course"
+        preview="Learn advanced strategies to maximize your profit in the ever-changing and highly volatile crypto market, where understanding the intricacies of blockchain technology and staying ahead of market trends are essential for success."
+        url="#"
+        category="Crypto"
+        chapters="12"
+        backgroundImage="../src/images/featuredImage.jpg"
+      />
+    </div>
+    <div id="courseShowcase">
+      <MoreCourseBlocks
+        title="NFT Crash Course"
+        preview="Learn advanced strategies to maximize your profit in the ever-changing and highly volatile crypto market, where understanding the intricacies of blockchain technology and staying ahead of market trends are essential for success."
+        url="#"
+        category="NFTs"
+        chapters="12"
+        backgroundImage="../src/images/nftCourseImage.jpg"
+      />
+
+      <MoreCourseBlocks
+        title="Stock Market Crash Course"
+        preview="Discover the fundamentals of stock market investing, including strategies for selecting profitable stocks and building a diversified portfolio to maximize long-term returns."
+        url="#"
+        category="Stocks"
+        chapters="14"
+        backgroundImage="stocksCourseImage.jpg"
+      />
+
+      
+    </div>
+  </div>
+
+  <style>
+    /* Extra small devices (phones, 600px and down) */
+    @media only screen and (max-width: 600px) {
+    }
+
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media only screen and (min-width: 600px) {
+    }
+
+    /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (min-width: 768px) {
+    }
+
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 992px) {
+    }
+
+    
+    #mainSectionCoursesContainer {
+      background-color: var(--primaryColor);
+      padding-top: 3.33rem;
+      padding-left: 3.56rem;
+      padding-right: 3.56rem;
+      padding-bottom: 1.67rem;
+    }
+
+    #headingArea > h2 {
+      font-family: var(--primaryFontFamily);
+      color: var(--complimentaryColor);
+      font-size: 3.11rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 120%;
+    }
+
+    #headingArea > p {
+      padding-top: 1.33rem;
+      font-family: var(--primaryFontFamily);
+      color: var(--secondaryColor);
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      padding-bottom: 1.67rem;
+    }
+
+    #innerSectionContainer {
+      display: flex;
+    }
+
+    #featuredCourse {
+      display: flex;
+      justify-content: space-between; /* Spreads out the columns */
+      align-items: center; /*Centers content vertically */
+      margin-right: 1.33rem;
+    }
+
+    #courseShowcase {
+      display: flex;
+      justify-content: flex-start; /* Spreads out the columns */
+      align-items: center; /*Centers content vertically */
+      flex-direction: column;
+    }
+  </style>
+</div>
