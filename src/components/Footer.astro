@@ -1,0 +1,263 @@
+---
+import cryptoFaxReportLogoIcon from "../images/cryptofaxreport-logo-icon.svg";
+import cryptoFaxReportLogoText from "../images/cryptofaxreport-logo-text.svg";
+
+import facebookSocialIcon from "../images/facebook-social-icon.svg";
+import instagramSocialIcon from "../images/instagram-social-icon.svg";
+import xAkaTwitterSocialIcon from "../images/x-aka-twitter-social-icon.svg";
+import discordSocialIcon from "../images/discord-social-icon.svg";
+import youtubeSocialIcon from "../images/youtube-social-icon.svg";
+import "../styles/global.css";
+---
+
+<div id="mainFooterContainer">
+  <div id="innerFooterContainerTop">
+    <div id="leftSide">
+      <div id="logoIcon">
+        <img
+          src={cryptoFaxReportLogoIcon.src}
+          alt="CryptoFaxReport.com Logo Icon"
+        />
+      </div>
+      <div id="logoText">
+        <img
+          src={cryptoFaxReportLogoText.src}
+          alt="CryptoFaxReport.com Logo Text"
+        />
+      </div>
+    </div>
+    <div id="middle">
+      <nav>
+        <a href="#">Reports</a>
+        <a href="#">CFR Academy</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+
+    <div id="rightSide">
+      <a href="#" target="_blank"
+        ><img src={facebookSocialIcon.src} alt="Facebook Social Icon" /></a
+      >
+      <a href="#" target="_blank"
+        ><img src={instagramSocialIcon.src} alt="Instagram Social Icon" /></a
+      >
+      <a href="#" target="_blank"
+        ><img
+          src={xAkaTwitterSocialIcon.src}
+          alt="X aka Twitter Social Icon"
+        /></a
+      >
+      <a href="#" target="_blank"
+        ><img src={discordSocialIcon.src} alt="Discord Social Icon" /></a
+      >
+      <a href="#" target="_blank"
+        ><img src={youtubeSocialIcon.src} alt="Youtube Social Icon" /></a
+      >
+    </div>
+  </div>
+  <div id="innerFooterContainerBottom"></div>
+  <div id="innerFooterText">© 2024 CryptoFax Report. All Rights Reserved. <nav>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms of Service</a>
+    <a href="#">Cookies Settings</a>
+  </nav></div>
+</div><!--main footer end -->
+
+<style>
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+  }
+
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+  }
+
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+  }
+
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+  }
+
+  #mainFooterContainer {
+    display: flex;
+    padding-top: 4.44rem;
+    padding-left: 3.56rem;
+    padding-right: 3.56rem;
+    padding-bottom: 4.44rem;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
+
+  #innerFooterContainerTop {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 2.22rem;
+  }
+
+  #leftSide {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  #leftSide > #logoIcon img {
+    width: 55px;
+  }
+
+  #leftSide > #logoText {
+    padding-left: 0.56rem;
+  }
+
+  #leftSide > #logoText img {
+    width: 206px;
+  }
+
+  #middle {
+    display: flex;
+    align-items: center;
+    font-family: var(--primaryFontFamily);
+    color: var(--secondaryColor);
+    font-size: 0.056rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    padding-right: 4.44rem;
+  }
+
+  #rightSide {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  #rightSide > img {
+    width: 24px;
+    height: 24px;
+    padding-right: 0.67rem;
+  }
+
+  #rightSide > a {
+    width: 24px;
+    height: 24px;
+    padding-right: 0.67rem;
+    transition: transform 0.2s;
+  }
+
+  #rightSide > a:hover {
+    width: 24px;
+    height: 24px;
+    padding-right: 0.67rem;
+    transform: scale(1.5);
+    transition: transform 0.2s;
+  }
+
+  #rightSide > a:active {
+    width: 24px;
+    height: 24px;
+    padding-right: 0.67rem;
+    transition: transform 0.2s;
+  }
+
+  #rightSide > a:visited {
+    width: 24px;
+    height: 24px;
+    padding-right: 0.67rem;
+    transition: transform 0.2s;
+  }
+
+  #middle > nav {
+    padding-left: 1.8rem;
+    font-size: 0.89rem;
+    font-weight: 400;
+  }
+
+  #middle > nav a {
+    color: var(--secondaryColor);
+    padding-left: 1.8rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  #middle > nav a:visited {
+    color: var(--secondaryColor);
+    padding-left: 1.8rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  #middle > nav a:hover {
+    color: var(--complimentaryColor);
+    padding-left: 1.8rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  #middle > nav a:active {
+    color: var(--complimentaryColor);
+    padding-left: 1.8rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  #buttonArea1 {
+    margin-right: -0.9rem;
+  }
+
+  #innerFooterContainerBottom {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    border-top-style: solid;
+    border-color: var(--secondaryColor);
+    border-width: 1px;
+    padding-bottom: 1.78rem;
+  }
+
+  #innerFooterText {
+    display: flex;
+    font-family: var(--primaryFontFamily);
+    color: var(--secondaryColor);
+    font-size: 0.78rem;
+    font-style:normal;
+    font-weight:400;
+    line-height:150%;
+  }
+
+  #innerFooterText > nav {
+    
+  }
+
+  #innerFooterText > nav a {
+    font-family: var(--primaryFontFamily);
+    color: var(--secondaryColor);
+    padding-left:1.33rem;
+    transition: color 0.3s ease;
+  }
+
+   #innerFooterText > nav a:active {
+    font-family: var(--primaryFontFamily);
+    color: var(--secondaryColor);
+    padding-left:1.33rem;
+    transition: color 0.3s ease;
+  }
+
+  #innerFooterText > nav a:visited {
+    font-family: var(--primaryFontFamily);
+    color: var(--secondaryColor);
+    padding-left:1.33rem;
+    transition: color 0.3s ease;
+  }
+
+  #innerFooterText > nav a:hover {
+    font-family: var(--primaryFontFamily);
+    color: var(--complimentaryColor);
+    padding-left:1.33rem;
+    transition: color 0.3s ease;
+  }
+</style>
