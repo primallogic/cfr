@@ -17,12 +17,14 @@ import "../styles/global.css";
 
 <div id="mainContainer">
   <div id="leftSide">
-    <a href={url}><img
-      src={backgroundImage}
-      alt={title}
-      style="min-width: 250px; max-width:250px; border-radius:6px; max-height: 223px; "
-      class="zoom-image"
-    /></a>
+    <a href={url}
+      ><img
+        src={backgroundImage}
+        alt={title}
+        style="min-width: 250px; max-width:250px; border-radius:6px; max-height: 223px; min-height:223px;);"
+        class="zoom-image"
+      /></a
+    >
   </div>
   <div id="rightSide">
     <div id="courseContent" class="column">
@@ -80,6 +82,8 @@ import "../styles/global.css";
 
   #leftSide {
     display: flex;
+    justify-content:center;
+    align-items:center;
     /* min-width: 250px;
     height: 223px; */
     /* align-self: stretch; */
