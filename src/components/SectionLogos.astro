@@ -21,7 +21,12 @@ import "../styles/global.css";
   <div id="innerSectionContainer">
     <div id="logosRow1">
       <img class="image" src={teslaLogo.src} width="140px" alt="Tesla logo" />
-      <img class="image" src={bitcoinLogo.src} width="140px" alt="Bitcoin logo" />
+      <img
+        class="image"
+        src={bitcoinLogo.src}
+        width="140px"
+        alt="Bitcoin logo"
+      />
       <img class="image" src={nvidiaLogo.src} width="140px" alt="Nvidia logo" />
       <img class="image" src={rippleLogo.src} width="140px" alt="Ripple logo" />
       <img class="image" src={metaLogo.src} width="140px" alt="Meta logo" />
@@ -32,72 +37,233 @@ import "../styles/global.css";
       <img class="image" src={solanaLogo.src} width="140px" alt="Solana logo" />
       <img class="image" src={adobeLogo.src} width="129.5" alt="Adobe logo" />
       <img class="image" src={nftLogo.src} width="85px" alt="NFT logo" />
-      <img class="image" src={ethereumLogo.src} width="140px" alt="Ethereum logo" />
-      <img class="image" src={microsoftLogo.src} width="140px" alt="Microsoft logo" />
+      <img
+        class="image"
+        src={ethereumLogo.src}
+        width="140px"
+        alt="Ethereum logo"
+      />
+      <img
+        class="image"
+        src={microsoftLogo.src}
+        width="140px"
+        alt="Microsoft logo"
+      />
     </div>
   </div>
 
   <style>
     /* Extra small devices (phones, 600px and down) */
     @media only screen and (max-width: 600px) {
+      /*center the complete group of logos*/
+      #mainSectionLogosContainer {
+        background-color: var(--primaryColor);
+        padding-top: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 1rem;
+      }
+
+      #headingArea > h2 {
+        font-family: var(--primaryFontFamily);
+        color: var(--secondaryColor);
+        text-align: center;
+        font-size: 0.8rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%;
+        padding-bottom: 1.33rem;
+      }
+
+      #logosRow1 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        /* padding-bottom: 1.33rem; */
+      }
+
+      #logosRow2 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+
+      #innerSectionContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto 0 auto;
+        width: 100%;
+      }
+
+      .image {
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-bottom: 1.67rem;
+        width: 30%;
+      }
     }
 
     /* Small devices (portrait tablets and large phones, 600px and up) */
     @media only screen and (min-width: 600px) {
+      /*center the complete group of logos*/
+      #mainSectionLogosContainer {
+        background-color: var(--primaryColor);
+        padding-top: 3.61rem;
+        padding-left: 3.56rem;
+        padding-right: 3.56rem;
+        padding-bottom: 3.61rem;
+      }
+
+      #headingArea > h2 {
+        font-family: var(--primaryFontFamily);
+        color: var(--secondaryColor);
+        text-align: center;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%;
+        padding-bottom: 1.33rem;
+      }
+
+      #logosRow1 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        /* padding-bottom: 1.33rem; */
+      }
+
+      #logosRow2 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+
+      #innerSectionContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto 0 auto;
+        width: 100%;
+
+        .image {
+          padding-left: 2.67rem;
+          padding-bottom: 1.67rem;
+        }
+      }
     }
 
     /* Medium devices (landscape tablets, 768px and up) */
     @media only screen and (min-width: 768px) {
+      /*center the complete group of logos*/
+      #mainSectionLogosContainer {
+        background-color: var(--primaryColor);
+        padding-top: 3.61rem;
+        padding-left: 3.56rem;
+        padding-right: 3.56rem;
+        padding-bottom: 3.61rem;
+      }
+
+      #headingArea > h2 {
+        font-family: var(--primaryFontFamily);
+        color: var(--secondaryColor);
+        text-align: center;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%;
+        padding-bottom: 1.33rem;
+      }
+
+      #logosRow1 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        /* padding-bottom: 1.33rem; */
+      }
+
+      #logosRow2 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+
+      #innerSectionContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto 0 auto;
+        width: 100%;
+
+        .image {
+          padding-left: 2.67rem;
+          padding-bottom: 1.67rem;
+        }
+      }
     }
 
-    /* Large devices (laptops/desktops, 992px and up) */
-    @media only screen and (min-width: 992px) {
-    }
+    /* Large devices (laptops/desktops, 1400px and up) */
+    @media only screen and (min-width: 1400px) {
+      /*center the complete group of logos*/
+      #mainSectionLogosContainer {
+        background-color: var(--primaryColor);
+        padding-top: 3.61rem;
+        padding-left: 3.56rem;
+        padding-right: 3.56rem;
+        padding-bottom: 3.61rem;
+      }
 
-    /*center the complete group of logos*/
-    #mainSectionLogosContainer {
-      background-color: var(--primaryColor);
-      padding-top: 3.61rem;
-      padding-left: 3.56rem;
-      padding-right: 3.56rem;
-      padding-bottom: 3.61rem;
-      
-    }
+      #headingArea > h2 {
+        font-family: var(--primaryFontFamily);
+        color: var(--secondaryColor);
+        text-align: center;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%;
+        padding-bottom: 1.33rem;
+      }
 
-    #headingArea > h2 {
-      font-family: var(--primaryFontFamily);
-      color: var(--secondaryColor);
-      text-align: center;
-      font-size: 1rem;
-      font-style:normal;
-      font-weight:700;
-      line-height:150%;
-      padding-bottom: 1.33rem;
-      
-    }
+      #logosRow1 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        padding-bottom: 1.33rem;
+      }
 
-    #logosRow1 {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-evenly;
-      padding-bottom: 1.33rem;
-    }
+      #logosRow2 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+      }
 
-    #logosRow2 {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-evenly;
-    }
+      #innerSectionContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto 0 auto;
+        width: 100%;
 
-    #innerSectionContainer {
-      margin:0 auto 0 auto;
-      width: 80%;
-      
+        .image {
+          padding-left: 2.67rem;
+        }
+      }
     }
-    
   </style>
 </div>

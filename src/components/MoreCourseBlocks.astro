@@ -21,7 +21,7 @@ import "../styles/global.css";
       ><img
         src={backgroundImage}
         alt={title}
-        style="min-width: 250px; max-width:250px; border-radius:6px; max-height: 223px; min-height:223px;);"
+        style="border-radius:6px; max-height: 223px; min-height:223px;);"
         class="zoom-image"
       /></a
     >
@@ -61,203 +61,789 @@ import "../styles/global.css";
 <style>
   /* Extra small devices (phones, 600px and down) */
   @media only screen and (max-width: 600px) {
+    #mainContainer {
+      display: flex;
+      padding-bottom: 2.78rem;
+      flex-direction: column;
+    }
+
+    #leftSide {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      /* min-width: 250px;
+    height: 223px; */
+      /* align-self: stretch; */
+      /* background-image: url("../images/nftCourseImage.jpg"); */
+      /* background-size: cover;
+    background-position: center; */
+      border-radius: 6px;
+      /* margin-right: 1.33rem; */
+      overflow: hidden;
+      position: relative;
+      padding-bottom: 1.11rem;
+    }
+
+    #leftSide img {
+      min-width: 300px; 
+      max-width: 300px;
+      min-height:200px;
+      max-height:200px;
+    }
+
+    #rightSide {
+      display: flex;
+    }
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    #courseContent {
+      max-width: 366px;
+      display: flex;
+      flex-direction:;
+      align-items: flex-start;
+    }
+
+    #infoContainer {
+      font-family: var(--primaryFontFamily);
+      color: var(--secondaryColor);
+      display: flex;
+      align-items: center;
+    }
+
+    #category {
+      font-family: var(--primaryFontFamily);
+      color: var(--primaryColor);
+      font-size: 0.78rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%;
+      background-color: var(--complimentaryColor);
+      padding: 0.22rem 0.44rem;
+      border-radius: 3px;
+    }
+
+    #chapters {
+      font-family: var(--primaryFontFamily);
+      color: var(--secondaryColor);
+      font-size: 0.78rem;
+      font-style: normal;
+      fot-weight: 600;
+      line-height: 150%;
+      padding-left: 0.89rem;
+    }
+
+    #contentContainer {
+      padding-top: 0.89rem;
+    }
+
+    #contentContainer > h2 {
+      font-family: var(--primaryFontFamily);
+      color: var(--secondaryColor);
+      font-size: 1.33rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 140%;
+    }
+
+    #contentContainer > p {
+      padding-top: 0.44rem;
+      font-family: var(--primaryFontFamily);
+      color: var(--secondaryColor);
+      font-size: 0.89rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      padding-bottom: 0.75rem;
+    }
+
+    #viewMoreContainer {
+      display: flex;
+      align-items: center; /*Centers content vertically */
+    }
+
+    #viewMoreText {
+      font-family: var(--primaryFontFamily);
+      color: var(--complimentaryColor);
+      gap: 0.44rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      padding-right: 0.44rem;
+      display: flex;
+      align-items: center; /*Centers content vertically */
+      font-size: 0.89rem;
+    }
+
+    #viewMoreText a {
+      font-family: var(--primaryFontFamily);
+      color: var(--complimentaryColor);
+      gap: 0.44rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      padding-right: 0.44rem;
+      display: flex;
+      align-items: center; /*Centers content vertically */
+      font-size: 0.89rem;
+      text-decoration: none;
+    }
+
+    #viewMoreText a:active {
+      font-family: var(--primaryFontFamily);
+      color: var(--complimentaryColor);
+      gap: 0.44rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      padding-right: 0.44rem;
+      display: flex;
+      align-items: center; /*Centers content vertically */
+      font-size: 0.89rem;
+      text-decoration: none;
+    }
+
+    #viewMoreText a:visited {
+      font-family: var(--primaryFontFamily);
+      color: var(--complimentaryColor);
+      gap: 0.44rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      padding-right: 0.44rem;
+      display: flex;
+      align-items: center; /*Centers content vertically */
+      font-size: 0.89rem;
+      text-decoration: none;
+    }
+
+    #viewMoreText a:hover {
+      font-family: var(--primaryFontFamily);
+      color: var(--complimentaryColor);
+      gap: 0.44rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      padding-right: 0.44rem;
+      display: flex;
+      align-items: center; /*Centers content vertically */
+      font-size: 0.89rem;
+      text-decoration: underline;
+    }
+
+    #viewMoreIcon {
+      font-family: var(--primaryFontFamily);
+      color: var(--complimentaryColor);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      display: flex;
+      align-items: center; /*Centers content vertically */
+    }
+
+    .zoom-image {
+      width: 100%; /* Set the width as per your requirement */
+      height: auto; /* Maintain the aspect ratio */
+      object-fit: cover; /* Ensure the image covers the area and maintains aspect ratio */
+      transition: transform 0.6s ease; /* Smooth transition for zoom effect */
+    }
+
+    .zoom-image:hover {
+      transform: scale(1.1); /* Zoom in the image by 10% */
+    }
   }
 
   /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 600px) {
+    #mainContainer {
+      display: flex;
+      padding-bottom: 2.78rem;
+    }
+
+    #leftSide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* min-width: 250px;
+    height: 223px; */
+      /* align-self: stretch; */
+      /* background-image: url("../images/nftCourseImage.jpg"); */
+      /* background-size: cover;
+    background-position: center; */
+      border-radius: 6px;
+      margin-right: 1.33rem;
+      overflow: hidden;
+      position: relative;
+    }
+
+    #leftSide img {
+      min-width: 250px; 
+      max-width: 250px;
+      /* min-height:200px;
+      max-height:200px; */
+    }
+
+    #rightSide {
+      display: flex;
+    }
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    #courseContent {
+      max-width: 366px;
+      display: flex;
+      flex-direction:;
+      align-items: flex-start;
+    }
+
+    #infoContainer {
+      font-family: var(--primaryFontFamily);
+      color: var(--secondaryColor);
+      display: flex;
+      align-items: center;
+    }
+
+    #category {
+      font-family: var(--primaryFontFamily);
+      color: var(--primaryColor);
+      font-size: 0.78rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%;
+      background-color: var(--complimentaryColor);
+      padding: 0.22rem 0.44rem;
+      border-radius: 3px;
+    }
+
+    #chapters {
+      font-family: var(--primaryFontFamily);
+      color: var(--secondaryColor);
+      font-size: 0.78rem;
+      font-style: normal;
+      fot-weight: 600;
+      line-height: 150%;
+      padding-left: 0.89rem;
+    }
+
+    #contentContainer {
+      padding-top: 0.89rem;
+    }
+
+    #contentContainer > h2 {
+      font-family: var(--primaryFontFamily);
+      color: var(--secondaryColor);
+      font-size: 1.33rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 140%;
+    }
+
+    #contentContainer > p {
+      padding-top: 0.44rem;
+      font-family: var(--primaryFontFamily);
+      color: var(--secondaryColor);
+      font-size: 0.89rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      padding-bottom: 0.75rem;
+    }
+
+    #viewMoreContainer {
+      display: flex;
+      align-items: center; /*Centers content vertically */
+    }
+
+    #viewMoreText {
+      font-family: var(--primaryFontFamily);
+      color: var(--complimentaryColor);
+      gap: 0.44rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      padding-right: 0.44rem;
+      display: flex;
+      align-items: center; /*Centers content vertically */
+      font-size: 0.89rem;
+    }
+
+    #viewMoreText a {
+      font-family: var(--primaryFontFamily);
+      color: var(--complimentaryColor);
+      gap: 0.44rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      padding-right: 0.44rem;
+      display: flex;
+      align-items: center; /*Centers content vertically */
+      font-size: 0.89rem;
+      text-decoration: none;
+    }
+
+    #viewMoreText a:active {
+      font-family: var(--primaryFontFamily);
+      color: var(--complimentaryColor);
+      gap: 0.44rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      padding-right: 0.44rem;
+      display: flex;
+      align-items: center; /*Centers content vertically */
+      font-size: 0.89rem;
+      text-decoration: none;
+    }
+
+    #viewMoreText a:visited {
+      font-family: var(--primaryFontFamily);
+      color: var(--complimentaryColor);
+      gap: 0.44rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      padding-right: 0.44rem;
+      display: flex;
+      align-items: center; /*Centers content vertically */
+      font-size: 0.89rem;
+      text-decoration: none;
+    }
+
+    #viewMoreText a:hover {
+      font-family: var(--primaryFontFamily);
+      color: var(--complimentaryColor);
+      gap: 0.44rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      padding-right: 0.44rem;
+      display: flex;
+      align-items: center; /*Centers content vertically */
+      font-size: 0.89rem;
+      text-decoration: underline;
+    }
+
+    #viewMoreIcon {
+      font-family: var(--primaryFontFamily);
+      color: var(--complimentaryColor);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      display: flex;
+      align-items: center; /*Centers content vertically */
+    }
+
+    .zoom-image {
+      width: 100%; /* Set the width as per your requirement */
+      height: auto; /* Maintain the aspect ratio */
+      object-fit: cover; /* Ensure the image covers the area and maintains aspect ratio */
+      transition: transform 0.6s ease; /* Smooth transition for zoom effect */
+    }
+
+    .zoom-image:hover {
+      transform: scale(1.1); /* Zoom in the image by 10% */
+    }
   }
 
   /* Medium devices (landscape tablets, 768px and up) */
   @media only screen and (min-width: 768px) {
-  }
+    #mainContainer {
+      display: flex;
+      padding-bottom: 2.78rem;
+    }
 
-  /* Large devices (laptops/desktops, 992px and up) */
-  @media only screen and (min-width: 992px) {
-  }
-
-  #mainContainer {
-    display: flex;
-    padding-bottom: 2.78rem;
-  }
-
-  #leftSide {
-    display: flex;
-    justify-content:center;
-    align-items:center;
-    /* min-width: 250px;
+    #leftSide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* min-width: 250px;
     height: 223px; */
-    /* align-self: stretch; */
-    /* background-image: url("../images/nftCourseImage.jpg"); */
-    /* background-size: cover;
+      /* align-self: stretch; */
+      /* background-image: url("../images/nftCourseImage.jpg"); */
+      /* background-size: cover;
     background-position: center; */
-    border-radius: 6px;
-    margin-right: 1.33rem;
-    overflow: hidden;
-    position: relative;
+      border-radius: 6px;
+      margin-right: 1.33rem;
+      overflow: hidden;
+      position: relative;
+    }
+
+    #leftSide img {
+      min-width: 250px; 
+      max-width: 250px;
+      /* min-height:200px;
+      max-height:200px; */
+    }
+
+    #rightSide {
+      display: flex;
+    }
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    #courseContent {
+      max-width: 366px;
+      display: flex;
+      flex-direction:;
+      align-items: flex-start;
+    }
+
+    #infoContainer {
+      font-family: var(--primaryFontFamily);
+      color: var(--secondaryColor);
+      display: flex;
+      align-items: center;
+    }
+
+    #category {
+      font-family: var(--primaryFontFamily);
+      color: var(--primaryColor);
+      font-size: 0.78rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%;
+      background-color: var(--complimentaryColor);
+      padding: 0.22rem 0.44rem;
+      border-radius: 3px;
+    }
+
+    #chapters {
+      font-family: var(--primaryFontFamily);
+      color: var(--secondaryColor);
+      font-size: 0.78rem;
+      font-style: normal;
+      fot-weight: 600;
+      line-height: 150%;
+      padding-left: 0.89rem;
+    }
+
+    #contentContainer {
+      padding-top: 0.89rem;
+    }
+
+    #contentContainer > h2 {
+      font-family: var(--primaryFontFamily);
+      color: var(--secondaryColor);
+      font-size: 1.33rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 140%;
+    }
+
+    #contentContainer > p {
+      padding-top: 0.44rem;
+      font-family: var(--primaryFontFamily);
+      color: var(--secondaryColor);
+      font-size: 0.89rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      padding-bottom: 0.75rem;
+    }
+
+    #viewMoreContainer {
+      display: flex;
+      align-items: center; /*Centers content vertically */
+    }
+
+    #viewMoreText {
+      font-family: var(--primaryFontFamily);
+      color: var(--complimentaryColor);
+      gap: 0.44rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      padding-right: 0.44rem;
+      display: flex;
+      align-items: center; /*Centers content vertically */
+      font-size: 0.89rem;
+    }
+
+    #viewMoreText a {
+      font-family: var(--primaryFontFamily);
+      color: var(--complimentaryColor);
+      gap: 0.44rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      padding-right: 0.44rem;
+      display: flex;
+      align-items: center; /*Centers content vertically */
+      font-size: 0.89rem;
+      text-decoration: none;
+    }
+
+    #viewMoreText a:active {
+      font-family: var(--primaryFontFamily);
+      color: var(--complimentaryColor);
+      gap: 0.44rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      padding-right: 0.44rem;
+      display: flex;
+      align-items: center; /*Centers content vertically */
+      font-size: 0.89rem;
+      text-decoration: none;
+    }
+
+    #viewMoreText a:visited {
+      font-family: var(--primaryFontFamily);
+      color: var(--complimentaryColor);
+      gap: 0.44rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      padding-right: 0.44rem;
+      display: flex;
+      align-items: center; /*Centers content vertically */
+      font-size: 0.89rem;
+      text-decoration: none;
+    }
+
+    #viewMoreText a:hover {
+      font-family: var(--primaryFontFamily);
+      color: var(--complimentaryColor);
+      gap: 0.44rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      padding-right: 0.44rem;
+      display: flex;
+      align-items: center; /*Centers content vertically */
+      font-size: 0.89rem;
+      text-decoration: underline;
+    }
+
+    #viewMoreIcon {
+      font-family: var(--primaryFontFamily);
+      color: var(--complimentaryColor);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      display: flex;
+      align-items: center; /*Centers content vertically */
+    }
+
+    .zoom-image {
+      width: 100%; /* Set the width as per your requirement */
+      height: auto; /* Maintain the aspect ratio */
+      object-fit: cover; /* Ensure the image covers the area and maintains aspect ratio */
+      transition: transform 0.6s ease; /* Smooth transition for zoom effect */
+    }
+
+    .zoom-image:hover {
+      transform: scale(1.1); /* Zoom in the image by 10% */
+    }
   }
 
-  #rightSide {
-    display: flex;
-  }
+  /* Large devices (laptops/desktops, 1400px and up) */
+  @media only screen and (min-width: 1400px) {
+    #mainContainer {
+      display: flex;
+      padding-bottom: 2.78rem;
+    }
 
-  .column {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-  }
+    #leftSide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* min-width: 250px;
+    height: 223px; */
+      /* align-self: stretch; */
+      /* background-image: url("../images/nftCourseImage.jpg"); */
+      /* background-size: cover;
+    background-position: center; */
+      border-radius: 6px;
+      margin-right: 1.33rem;
+      overflow: hidden;
+      position: relative;
+    }
 
-  #courseContent {
-    max-width: 366px;
-    display: flex;
-    flex-direction:;
-    align-items: flex-start;
-  }
 
-  #infoContainer {
-    font-family: var(--primaryFontFamily);
-    color: var(--secondaryColor);
-    display: flex;
-    align-items: center;
-  }
+    #leftSide img {
+      min-width: 250px; 
+      max-width: 250px;
+      /* min-height:200px;
+      max-height:200px; */
+    }
 
-  #category {
-    font-family: var(--primaryFontFamily);
-    color: var(--primaryColor);
-    font-size: 0.78rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 150%;
-    background-color: var(--complimentaryColor);
-    padding: 0.22rem 0.44rem;
-    border-radius: 3px;
-  }
+    
+    #rightSide {
+      display: flex;
+    }
 
-  #chapters {
-    font-family: var(--primaryFontFamily);
-    color: var(--secondaryColor);
-    font-size: 0.78rem;
-    font-style: normal;
-    fot-weight: 600;
-    line-height: 150%;
-    padding-left: 0.89rem;
-  }
+    .column {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
 
-  #contentContainer {
-    padding-top: 0.89rem;
-  }
+    #courseContent {
+      max-width: 366px;
+      display: flex;
+      flex-direction:;
+      align-items: flex-start;
+    }
 
-  #contentContainer > h2 {
-    font-family: var(--primaryFontFamily);
-    color: var(--secondaryColor);
-    font-size: 1.33rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 140%;
-  }
+    #infoContainer {
+      font-family: var(--primaryFontFamily);
+      color: var(--secondaryColor);
+      display: flex;
+      align-items: center;
+    }
 
-  #contentContainer > p {
-    padding-top: 0.44rem;
-    font-family: var(--primaryFontFamily);
-    color: var(--secondaryColor);
-    font-size: 0.89rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%;
-    padding-bottom: 0.75rem;
-  }
+    #category {
+      font-family: var(--primaryFontFamily);
+      color: var(--primaryColor);
+      font-size: 0.78rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%;
+      background-color: var(--complimentaryColor);
+      padding: 0.22rem 0.44rem;
+      border-radius: 3px;
+    }
 
-  #viewMoreContainer {
-    display: flex;
-    align-items: center; /*Centers content vertically */
-  }
+    #chapters {
+      font-family: var(--primaryFontFamily);
+      color: var(--secondaryColor);
+      font-size: 0.78rem;
+      font-style: normal;
+      fot-weight: 600;
+      line-height: 150%;
+      padding-left: 0.89rem;
+    }
 
-  #viewMoreText {
-    font-family: var(--primaryFontFamily);
-    color: var(--complimentaryColor);
-    gap: 0.44rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%;
-    padding-right: 0.44rem;
-    display: flex;
-    align-items: center; /*Centers content vertically */
-    font-size: 0.89rem;
-  }
+    #contentContainer {
+      padding-top: 0.89rem;
+    }
 
-  #viewMoreText a {
-    font-family: var(--primaryFontFamily);
-    color: var(--complimentaryColor);
-    gap: 0.44rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%;
-    padding-right: 0.44rem;
-    display: flex;
-    align-items: center; /*Centers content vertically */
-    font-size: 0.89rem;
-    text-decoration: none;
-  }
+    #contentContainer > h2 {
+      font-family: var(--primaryFontFamily);
+      color: var(--secondaryColor);
+      font-size: 1.33rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 140%;
+    }
 
-  #viewMoreText a:active {
-    font-family: var(--primaryFontFamily);
-    color: var(--complimentaryColor);
-    gap: 0.44rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%;
-    padding-right: 0.44rem;
-    display: flex;
-    align-items: center; /*Centers content vertically */
-    font-size: 0.89rem;
-    text-decoration: none;
-  }
+    #contentContainer > p {
+      padding-top: 0.44rem;
+      font-family: var(--primaryFontFamily);
+      color: var(--secondaryColor);
+      font-size: 0.89rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      padding-bottom: 0.75rem;
+    }
 
-  #viewMoreText a:visited {
-    font-family: var(--primaryFontFamily);
-    color: var(--complimentaryColor);
-    gap: 0.44rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%;
-    padding-right: 0.44rem;
-    display: flex;
-    align-items: center; /*Centers content vertically */
-    font-size: 0.89rem;
-    text-decoration: none;
-  }
+    #viewMoreContainer {
+      display: flex;
+      align-items: center; /*Centers content vertically */
+    }
 
-  #viewMoreText a:hover {
-    font-family: var(--primaryFontFamily);
-    color: var(--complimentaryColor);
-    gap: 0.44rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%;
-    padding-right: 0.44rem;
-    display: flex;
-    align-items: center; /*Centers content vertically */
-    font-size: 0.89rem;
-    text-decoration: underline;
-  }
+    #viewMoreText {
+      font-family: var(--primaryFontFamily);
+      color: var(--complimentaryColor);
+      gap: 0.44rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      padding-right: 0.44rem;
+      display: flex;
+      align-items: center; /*Centers content vertically */
+      font-size: 0.89rem;
+    }
 
-  #viewMoreIcon {
-    font-family: var(--primaryFontFamily);
-    color: var(--complimentaryColor);
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%;
-    display: flex;
-    align-items: center; /*Centers content vertically */
-  }
+    #viewMoreText a {
+      font-family: var(--primaryFontFamily);
+      color: var(--complimentaryColor);
+      gap: 0.44rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      padding-right: 0.44rem;
+      display: flex;
+      align-items: center; /*Centers content vertically */
+      font-size: 0.89rem;
+      text-decoration: none;
+    }
 
-  .zoom-image {
-    width: 100%; /* Set the width as per your requirement */
-    height: auto; /* Maintain the aspect ratio */
-    object-fit: cover; /* Ensure the image covers the area and maintains aspect ratio */
-    transition: transform 0.6s ease; /* Smooth transition for zoom effect */
-  }
+    #viewMoreText a:active {
+      font-family: var(--primaryFontFamily);
+      color: var(--complimentaryColor);
+      gap: 0.44rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      padding-right: 0.44rem;
+      display: flex;
+      align-items: center; /*Centers content vertically */
+      font-size: 0.89rem;
+      text-decoration: none;
+    }
 
-  .zoom-image:hover {
-    transform: scale(1.1); /* Zoom in the image by 10% */
+    #viewMoreText a:visited {
+      font-family: var(--primaryFontFamily);
+      color: var(--complimentaryColor);
+      gap: 0.44rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      padding-right: 0.44rem;
+      display: flex;
+      align-items: center; /*Centers content vertically */
+      font-size: 0.89rem;
+      text-decoration: none;
+    }
+
+    #viewMoreText a:hover {
+      font-family: var(--primaryFontFamily);
+      color: var(--complimentaryColor);
+      gap: 0.44rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      padding-right: 0.44rem;
+      display: flex;
+      align-items: center; /*Centers content vertically */
+      font-size: 0.89rem;
+      text-decoration: underline;
+    }
+
+    #viewMoreIcon {
+      font-family: var(--primaryFontFamily);
+      color: var(--complimentaryColor);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      display: flex;
+      align-items: center; /*Centers content vertically */
+    }
+
+    .zoom-image {
+      width: 100%; /* Set the width as per your requirement */
+      height: auto; /* Maintain the aspect ratio */
+      object-fit: cover; /* Ensure the image covers the area and maintains aspect ratio */
+      transition: transform 0.6s ease; /* Smooth transition for zoom effect */
+    }
+
+    .zoom-image:hover {
+      transform: scale(1.1); /* Zoom in the image by 10% */
+    }
   }
 </style>

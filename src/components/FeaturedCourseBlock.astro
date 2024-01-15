@@ -16,12 +16,14 @@ import "../styles/global.css";
 
 <div id="mainContainer">
   <div id="featuredImage">
-    <a href={url}><img
-      src={backgroundImage}
-      alt={title}
-      style="min-width: 640px; max-width:640px; border-radius:6px; max-height: 400px; "
-      class="zoom-image"
-    /></a>
+    <a href={url}
+      ><img
+        src={backgroundImage}
+        alt={title}
+        style="border-radius:6px; max-height: 400px; "
+        class="zoom-image"
+      /></a
+    >
     <!-- <img
       class="image"
       src={featuredImage.src}
@@ -60,181 +62,690 @@ import "../styles/global.css";
   <style>
     /* Extra small devices (phones, 600px and down) */
     @media only screen and (max-width: 600px) {
+      #mainContainer {
+        width: 300px;
+      }
+
+      #featuredImage {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+        border-radius: 6px;
+      }
+
+      #featuredImage img {
+        min-width: 300px;
+        max-width: 300px;
+      }
+
+      #infoContainer {
+        padding-top: 1.33rem;
+        font-family: var(--primaryFontFamily);
+        color: var(--secondaryColor);
+        display: flex;
+        align-items: center;
+      }
+
+      #category {
+        font-family: var(--primaryFontFamily);
+        color: var(--primaryColor);
+        font-size: 0.78rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+        background-color: var(--complimentaryColor);
+        padding: 0.22rem 0.44rem;
+        border-radius: 3px;
+      }
+
+      #chapters {
+        font-family: var(--primaryFontFamily);
+        color: var(--secondaryColor);
+        font-size: 0.78rem;
+        font-style: normal;
+        fot-weight: 600;
+        line-height: 150%;
+        padding-left: 0.89rem;
+      }
+
+      #contentContainer {
+        padding-top: 0.89rem;
+      }
+
+      #contentContainer > h2 {
+        font-family: var(--primaryFontFamily);
+        color: var(--secondaryColor);
+        font-size: 1.33rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 140%;
+      }
+
+      #contentContainer > p {
+        padding-top: 0.44rem;
+        font-family: var(--primaryFontFamily);
+        color: var(--secondaryColor);
+        font-size: 0.89rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        padding-bottom: 0.75rem;
+      }
+
+      #viewMoreContainer {
+        display: flex;
+        align-items: center; /*Centers content vertically */
+
+        padding-bottom: 2.22rem;
+      }
+
+      #viewMoreText {
+        font-family: var(--primaryFontFamily);
+        color: var(--complimentaryColor);
+        gap: 0.44rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        padding-right: 0.44rem;
+        display: flex;
+        align-items: center; /*Centers content vertically */
+        font-size: 0.89rem;
+      }
+
+      #viewMoreText a {
+        font-family: var(--primaryFontFamily);
+        color: var(--complimentaryColor);
+        gap: 0.44rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        padding-right: 0.44rem;
+        display: flex;
+        align-items: center; /*Centers content vertically */
+        font-size: 0.89rem;
+        text-decoration: none;
+      }
+
+      #viewMoreText a:active {
+        font-family: var(--primaryFontFamily);
+        color: var(--complimentaryColor);
+        gap: 0.44rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        padding-right: 0.44rem;
+        display: flex;
+        align-items: center; /*Centers content vertically */
+        font-size: 0.89rem;
+        text-decoration: none;
+      }
+
+      #viewMoreText a:visited {
+        font-family: var(--primaryFontFamily);
+        color: var(--complimentaryColor);
+        gap: 0.44rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        padding-right: 0.44rem;
+        display: flex;
+        align-items: center; /*Centers content vertically */
+        font-size: 0.89rem;
+        text-decoration: none;
+      }
+
+      #viewMoreText a:hover {
+        font-family: var(--primaryFontFamily);
+        color: var(--complimentaryColor);
+        gap: 0.44rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        padding-right: 0.44rem;
+        display: flex;
+        align-items: center; /*Centers content vertically */
+        font-size: 0.89rem;
+        text-decoration: underline;
+      }
+
+      #viewMoreIcon {
+        font-family: var(--primaryFontFamily);
+        color: var(--complimentaryColor);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        display: flex;
+        align-items: center; /*Centers content vertically */
+      }
+
+      .zoom-image {
+        width: 100%; /* Set the width as per your requirement */
+        height: auto; /* Maintain the aspect ratio */
+        object-fit: cover; /* Ensure the image covers the area and maintains aspect ratio */
+        transition: transform 0.6s ease; /* Smooth transition for zoom effect */
+      }
+
+      .zoom-image:hover {
+        transform: scale(1.1); /* Zoom in the image by 10% */
+      }
     }
 
     /* Small devices (portrait tablets and large phones, 600px and up) */
     @media only screen and (min-width: 600px) {
+      #mainContainer {
+        width: 520px;
+      }
+
+      #featuredImage {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+        border-radius: 6px;
+      }
+
+      #featuredImage img {
+        min-width: 520;
+        max-width: 520;
+      }
+
+      #infoContainer {
+        padding-top: 1.33rem;
+        font-family: var(--primaryFontFamily);
+        color: var(--secondaryColor);
+        display: flex;
+        align-items: center;
+      }
+
+      #category {
+        font-family: var(--primaryFontFamily);
+        color: var(--primaryColor);
+        font-size: 0.78rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+        background-color: var(--complimentaryColor);
+        padding: 0.22rem 0.44rem;
+        border-radius: 3px;
+      }
+
+      #chapters {
+        font-family: var(--primaryFontFamily);
+        color: var(--secondaryColor);
+        font-size: 0.78rem;
+        font-style: normal;
+        fot-weight: 600;
+        line-height: 150%;
+        padding-left: 0.89rem;
+      }
+
+      #contentContainer {
+        padding-top: 0.89rem;
+                
+      }
+
+      #contentContainer > h2 {
+        font-family: var(--primaryFontFamily);
+        color: var(--secondaryColor);
+        font-size: 1.33rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 140%;
+      }
+
+      #contentContainer > p {
+        padding-top: 0.44rem;
+        font-family: var(--primaryFontFamily);
+        color: var(--secondaryColor);
+        font-size: 0.89rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        padding-bottom: 0.75rem;
+      }
+
+      #viewMoreContainer {
+        display: flex;
+        align-items: center; /*Centers content vertically */
+
+        padding-bottom: 2.22rem;
+      }
+
+      #viewMoreText {
+        font-family: var(--primaryFontFamily);
+        color: var(--complimentaryColor);
+        gap: 0.44rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        padding-right: 0.44rem;
+        display: flex;
+        align-items: center; /*Centers content vertically */
+        font-size: 0.89rem;
+      }
+
+      #viewMoreText a {
+        font-family: var(--primaryFontFamily);
+        color: var(--complimentaryColor);
+        gap: 0.44rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        padding-right: 0.44rem;
+        display: flex;
+        align-items: center; /*Centers content vertically */
+        font-size: 0.89rem;
+        text-decoration: none;
+      }
+
+      #viewMoreText a:active {
+        font-family: var(--primaryFontFamily);
+        color: var(--complimentaryColor);
+        gap: 0.44rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        padding-right: 0.44rem;
+        display: flex;
+        align-items: center; /*Centers content vertically */
+        font-size: 0.89rem;
+        text-decoration: none;
+      }
+
+      #viewMoreText a:visited {
+        font-family: var(--primaryFontFamily);
+        color: var(--complimentaryColor);
+        gap: 0.44rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        padding-right: 0.44rem;
+        display: flex;
+        align-items: center; /*Centers content vertically */
+        font-size: 0.89rem;
+        text-decoration: none;
+      }
+
+      #viewMoreText a:hover {
+        font-family: var(--primaryFontFamily);
+        color: var(--complimentaryColor);
+        gap: 0.44rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        padding-right: 0.44rem;
+        display: flex;
+        align-items: center; /*Centers content vertically */
+        font-size: 0.89rem;
+        text-decoration: underline;
+      }
+
+      #viewMoreIcon {
+        font-family: var(--primaryFontFamily);
+        color: var(--complimentaryColor);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        display: flex;
+        align-items: center; /*Centers content vertically */
+      }
+
+      .zoom-image {
+        width: 100%; /* Set the width as per your requirement */
+        height: auto; /* Maintain the aspect ratio */
+        object-fit: cover; /* Ensure the image covers the area and maintains aspect ratio */
+        transition: transform 0.6s ease; /* Smooth transition for zoom effect */
+      }
+
+      .zoom-image:hover {
+        transform: scale(1.1); /* Zoom in the image by 10% */
+      }
     }
 
     /* Medium devices (landscape tablets, 768px and up) */
     @media only screen and (min-width: 768px) {
+      #mainContainer {
+        width: 640px;
+      }
+
+      #featuredImage {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+        border-radius: 6px;
+      }
+
+      #featuredImage img {
+        min-width: 640px;
+        max-width: 640px;
+      }
+
+      #infoContainer {
+        padding-top: 1.33rem;
+        font-family: var(--primaryFontFamily);
+        color: var(--secondaryColor);
+        display: flex;
+        align-items: center;
+      }
+
+      #category {
+        font-family: var(--primaryFontFamily);
+        color: var(--primaryColor);
+        font-size: 0.78rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+        background-color: var(--complimentaryColor);
+        padding: 0.22rem 0.44rem;
+        border-radius: 3px;
+      }
+
+      #chapters {
+        font-family: var(--primaryFontFamily);
+        color: var(--secondaryColor);
+        font-size: 0.78rem;
+        font-style: normal;
+        fot-weight: 600;
+        line-height: 150%;
+        padding-left: 0.89rem;
+      }
+
+      #contentContainer {
+        padding-top: 0.89rem;
+      }
+
+      #contentContainer > h2 {
+        font-family: var(--primaryFontFamily);
+        color: var(--secondaryColor);
+        font-size: 1.33rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 140%;
+      }
+
+      #contentContainer > p {
+        padding-top: 0.44rem;
+        font-family: var(--primaryFontFamily);
+        color: var(--secondaryColor);
+        font-size: 0.89rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        padding-bottom: 0.75rem;
+      }
+
+      #viewMoreContainer {
+        display: flex;
+        align-items: center; /*Centers content vertically */
+
+        padding-bottom: 2.22rem;
+      }
+
+      #viewMoreText {
+        font-family: var(--primaryFontFamily);
+        color: var(--complimentaryColor);
+        gap: 0.44rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        padding-right: 0.44rem;
+        display: flex;
+        align-items: center; /*Centers content vertically */
+        font-size: 0.89rem;
+      }
+
+      #viewMoreText a {
+        font-family: var(--primaryFontFamily);
+        color: var(--complimentaryColor);
+        gap: 0.44rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        padding-right: 0.44rem;
+        display: flex;
+        align-items: center; /*Centers content vertically */
+        font-size: 0.89rem;
+        text-decoration: none;
+      }
+
+      #viewMoreText a:active {
+        font-family: var(--primaryFontFamily);
+        color: var(--complimentaryColor);
+        gap: 0.44rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        padding-right: 0.44rem;
+        display: flex;
+        align-items: center; /*Centers content vertically */
+        font-size: 0.89rem;
+        text-decoration: none;
+      }
+
+      #viewMoreText a:visited {
+        font-family: var(--primaryFontFamily);
+        color: var(--complimentaryColor);
+        gap: 0.44rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        padding-right: 0.44rem;
+        display: flex;
+        align-items: center; /*Centers content vertically */
+        font-size: 0.89rem;
+        text-decoration: none;
+      }
+
+      #viewMoreText a:hover {
+        font-family: var(--primaryFontFamily);
+        color: var(--complimentaryColor);
+        gap: 0.44rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        padding-right: 0.44rem;
+        display: flex;
+        align-items: center; /*Centers content vertically */
+        font-size: 0.89rem;
+        text-decoration: underline;
+      }
+
+      #viewMoreIcon {
+        font-family: var(--primaryFontFamily);
+        color: var(--complimentaryColor);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        display: flex;
+        align-items: center; /*Centers content vertically */
+      }
+
+      .zoom-image {
+        width: 100%; /* Set the width as per your requirement */
+        height: auto; /* Maintain the aspect ratio */
+        object-fit: cover; /* Ensure the image covers the area and maintains aspect ratio */
+        transition: transform 0.6s ease; /* Smooth transition for zoom effect */
+      }
+
+      .zoom-image:hover {
+        transform: scale(1.1); /* Zoom in the image by 10% */
+      }
     }
 
-    /* Large devices (laptops/desktops, 992px and up) */
-    @media only screen and (min-width: 992px) {
-    }
+    /* Large devices (laptops/desktops, 1400px and up) */
+    @media only screen and (min-width: 1400px) {
+      #mainContainer {
+        width: 640px;
+      }
 
-    #mainContainer {
-      width: 640px;
-    }
+      #featuredImage {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+        border-radius: 6px;
+      }
 
-    #featuredImage {
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      overflow: hidden;
-      position: relative;
-      border-radius: 6px;
-    }
+      #featuredImage img {
+        min-width: 640px;
+        max-width: 640px;
+      }
 
-    #infoContainer {
-      padding-top: 1.33rem;
-      font-family: var(--primaryFontFamily);
-      color: var(--secondaryColor);
-      display: flex;
-      align-items: center;
-    }
+      #infoContainer {
+        padding-top: 1.33rem;
+        font-family: var(--primaryFontFamily);
+        color: var(--secondaryColor);
+        display: flex;
+        align-items: center;
+      }
 
-    #category {
-      font-family: var(--primaryFontFamily);
-      color: var(--primaryColor);
-      font-size: 0.78rem;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 150%;
-      background-color: var(--complimentaryColor);
-      padding: 0.22rem 0.44rem;
-      border-radius: 3px;
-    }
+      #category {
+        font-family: var(--primaryFontFamily);
+        color: var(--primaryColor);
+        font-size: 0.78rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+        background-color: var(--complimentaryColor);
+        padding: 0.22rem 0.44rem;
+        border-radius: 3px;
+      }
 
-    #chapters {
-      font-family: var(--primaryFontFamily);
-      color: var(--secondaryColor);
-      font-size: 0.78rem;
-      font-style: normal;
-      fot-weight: 600;
-      line-height: 150%;
-      padding-left: 0.89rem;
-    }
+      #chapters {
+        font-family: var(--primaryFontFamily);
+        color: var(--secondaryColor);
+        font-size: 0.78rem;
+        font-style: normal;
+        fot-weight: 600;
+        line-height: 150%;
+        padding-left: 0.89rem;
+      }
 
-    #contentContainer {
-      padding-top: 0.89rem;
-    }
+      #contentContainer {
+        padding-top: 0.89rem;
+      }
 
-    #contentContainer > h2 {
-      font-family: var(--primaryFontFamily);
-      color: var(--secondaryColor);
-      font-size: 1.33rem;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 140%;
-    }
+      #contentContainer > h2 {
+        font-family: var(--primaryFontFamily);
+        color: var(--secondaryColor);
+        font-size: 1.33rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 140%;
+      }
 
-    #contentContainer > p {
-      padding-top: 0.44rem;
-      font-family: var(--primaryFontFamily);
-      color: var(--secondaryColor);
-      font-size: 0.89rem;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 150%;
-      padding-bottom: 0.75rem;
-    }
+      #contentContainer > p {
+        padding-top: 0.44rem;
+        font-family: var(--primaryFontFamily);
+        color: var(--secondaryColor);
+        font-size: 0.89rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        padding-bottom: 0.75rem;
+      }
 
-    #viewMoreContainer {
-      display: flex;
+      #viewMoreContainer {
+        display: flex;
 
-      align-items: center; /*Centers content vertically */
-    }
+        align-items: center; /*Centers content vertically */
+      }
 
-    #viewMoreText {
-      font-family: var(--primaryFontFamily);
-      color: var(--complimentaryColor);
-      gap: 0.44rem;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 150%;
-      padding-right: 0.44rem;
-      display: flex;
-      align-items: center; /*Centers content vertically */
-      font-size: 0.89rem;
-    }
+      #viewMoreText {
+        font-family: var(--primaryFontFamily);
+        color: var(--complimentaryColor);
+        gap: 0.44rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        padding-right: 0.44rem;
+        display: flex;
+        align-items: center; /*Centers content vertically */
+        font-size: 0.89rem;
+      }
 
-    #viewMoreText a {
-      font-family: var(--primaryFontFamily);
-      color: var(--complimentaryColor);
-      gap: 0.44rem;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 150%;
-      padding-right: 0.44rem;
-      display: flex;
-      align-items: center; /*Centers content vertically */
-      font-size: 0.89rem;
-      text-decoration: none;
-    }
+      #viewMoreText a {
+        font-family: var(--primaryFontFamily);
+        color: var(--complimentaryColor);
+        gap: 0.44rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        padding-right: 0.44rem;
+        display: flex;
+        align-items: center; /*Centers content vertically */
+        font-size: 0.89rem;
+        text-decoration: none;
+      }
 
-    #viewMoreText a:active {
-      font-family: var(--primaryFontFamily);
-      color: var(--complimentaryColor);
-      gap: 0.44rem;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 150%;
-      padding-right: 0.44rem;
-      display: flex;
-      align-items: center; /*Centers content vertically */
-      font-size: 0.89rem;
-      text-decoration: none;
-    }
+      #viewMoreText a:active {
+        font-family: var(--primaryFontFamily);
+        color: var(--complimentaryColor);
+        gap: 0.44rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        padding-right: 0.44rem;
+        display: flex;
+        align-items: center; /*Centers content vertically */
+        font-size: 0.89rem;
+        text-decoration: none;
+      }
 
-    #viewMoreText a:visited {
-      font-family: var(--primaryFontFamily);
-      color: var(--complimentaryColor);
-      gap: 0.44rem;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 150%;
-      padding-right: 0.44rem;
-      display: flex;
-      align-items: center; /*Centers content vertically */
-      font-size: 0.89rem;
-      text-decoration: none;
-    }
+      #viewMoreText a:visited {
+        font-family: var(--primaryFontFamily);
+        color: var(--complimentaryColor);
+        gap: 0.44rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        padding-right: 0.44rem;
+        display: flex;
+        align-items: center; /*Centers content vertically */
+        font-size: 0.89rem;
+        text-decoration: none;
+      }
 
-    #viewMoreText a:hover {
-      font-family: var(--primaryFontFamily);
-      color: var(--complimentaryColor);
-      gap: 0.44rem;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 150%;
-      padding-right: 0.44rem;
-      display: flex;
-      align-items: center; /*Centers content vertically */
-      font-size: 0.89rem;
-      text-decoration: underline;
-    }
+      #viewMoreText a:hover {
+        font-family: var(--primaryFontFamily);
+        color: var(--complimentaryColor);
+        gap: 0.44rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        padding-right: 0.44rem;
+        display: flex;
+        align-items: center; /*Centers content vertically */
+        font-size: 0.89rem;
+        text-decoration: underline;
+      }
 
-    #viewMoreIcon {
-      font-family: var(--primaryFontFamily);
-      color: var(--complimentaryColor);
-      font-style: normal;
-      font-weight: 400;
-      line-height: 150%;
-      display: flex;
-      align-items: center; /*Centers content vertically */
-    }
+      #viewMoreIcon {
+        font-family: var(--primaryFontFamily);
+        color: var(--complimentaryColor);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        display: flex;
+        align-items: center; /*Centers content vertically */
+      }
 
-    .zoom-image {
-      width: 100%; /* Set the width as per your requirement */
-      height: auto; /* Maintain the aspect ratio */
-      object-fit: cover; /* Ensure the image covers the area and maintains aspect ratio */
-      transition: transform 0.6s ease; /* Smooth transition for zoom effect */
-    }
+      .zoom-image {
+        width: 100%; /* Set the width as per your requirement */
+        height: auto; /* Maintain the aspect ratio */
+        object-fit: cover; /* Ensure the image covers the area and maintains aspect ratio */
+        transition: transform 0.6s ease; /* Smooth transition for zoom effect */
+      }
 
-    .zoom-image:hover {
-      transform: scale(1.1); /* Zoom in the image by 10% */
+      .zoom-image:hover {
+        transform: scale(1.1); /* Zoom in the image by 10% */
+      }
     }
   </style>
 </div>
