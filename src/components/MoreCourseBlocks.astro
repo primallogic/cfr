@@ -457,8 +457,8 @@ import "../styles/global.css";
   @media only screen and (min-width: 768px) {
     #mainContainer {
       display: flex;
+      justify-content: flex-start;
       padding-bottom: 2.78rem;
-      
     }
 
     #leftSide {
@@ -471,11 +471,10 @@ import "../styles/global.css";
       /* background-image: url("../images/nftCourseImage.jpg"); */
       /* background-size: cover;
     background-position: center; */
-      border-radius: 6px;
       margin-right: 1.33rem;
       overflow: hidden;
       position: relative;
-      
+      border-radius: 6px;
     }
 
     #leftSide img {
@@ -487,10 +486,12 @@ import "../styles/global.css";
 
     #rightSide {
       display: flex;
+      justify-content: flex-start;
     }
 
     .column {
       display: flex;
+      justify-content: flex-start;
       flex-direction: column;
       flex: 1;
     }
