@@ -49,32 +49,35 @@ import "../styles/global.css";
   }
 
   #mainNavContainer {
-    font-family: var(--primaryFontFamily);
     display: flex;
-    justify-content: space-between; /* Spreads out the columns */
-    align-items: center; /*Centers content vertically */
+    justify-content: space-between;
+    align-items: center;
     background-color: var(--primaryColor);
+    width: 100%;
     height: 72px;
-    font-family: var(--primaryFontFamily);
-    border-bottom: 1px solid var(--primaryColor);
-    /*this allows us to have a sticky header*/
     position: sticky;
     top: 0;
     z-index: 1000;
-  }
-
-  #leftSide {
-    font-family: var(--primaryFontFamily);
-    margin-left: 3.6rem;
-    display: flex;
-    justify-content: space-between; /* Spreads out the columns */
-    align-items: center; /*Centers content vertically */
     gap: 10px;
   }
 
-  #rightSide {
+  #leftSide {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     font-family: var(--primaryFontFamily);
+    margin-left: 3.6rem;
+  }
+
+  #rightSide {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     margin-right: 3.6rem;
+  }
+
+  #logoText {
+    padding-left: 0.56rem;
   }
 
   nav {
