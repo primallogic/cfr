@@ -1,23 +1,22 @@
 ---
 interface Props {
-	text: string;
+  text: string;
 }
 
 const { text } = Astro.props;
-import '../styles/global.css'
+import "../styles/global.css";
 ---
 
 <div id="button">
-    {text}
+  <button class="buttonStyle1">{text}</button>
 </div>
 
-
- 
-  <style>
+<style>
   .buttonStyle1 {
-	border-style:solid;
-	border-width:2px;
-	padding: 0.44rem 1.11rem 0.44rem 20px;
-    color:var(--complimentaryColor);
+    border-style: solid;
+    border-width: 2px;
+    padding: 0.44rem 1.11rem 0.44rem 20px;
+    color: var(--primaryColor);
+    background-color: var(--complimentaryColor);
   }
 </style>

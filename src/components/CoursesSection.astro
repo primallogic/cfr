@@ -6,39 +6,41 @@ import "../styles/global.css";
 ---
 
 <div id="mainSectionCoursesContainer">
-  <div id="headingArea">
-    <h2>Courses</h2>
-    <p>Choose from a variety of courses on Crypto, NFTs, and Stocks.</p>
-  </div>
-  <div id="innerSectionContainer">
-    <div id="featuredCourse">
-      <FeaturedCourseBlock
-        title="Blockchain Crash Course"
-        preview="Learn advanced strategies to maximize your profit in the ever-changing and highly volatile crypto market, where understanding the intricacies of blockchain technology and staying ahead of market trends are essential for success."
-        url="#"
-        category="Crypto"
-        chapters="12"
-        backgroundImage="featuredImage.jpg"
-      />
+  <div id="innerSectionMainContainer">
+    <div id="headingArea">
+      <h2>Courses</h2>
+      <p>Choose from a variety of courses on Crypto, NFTs, and Stocks.</p>
     </div>
-    <div id="courseShowcase">
-      <MoreCourseBlocks
-        title="NFT Crash Course"
-        preview="Learn the step-by-step process of creating, buying, and selling non-fungible tokens in the rapidly growing digital market, where artist and collectors are connecting in new and innovative ways."
-        url="#"
-        category="NFTs"
-        chapters="12"
-        backgroundImage="nftCourseImage.jpg"
-      />
+    <div id="innerSectionContainer">
+      <div id="featuredCourse">
+        <FeaturedCourseBlock
+          title="Blockchain Crash Course"
+          preview="Learn advanced strategies to maximize your profit in the ever-changing and highly volatile crypto market, where understanding the intricacies of blockchain technology and staying ahead of market trends are essential for success."
+          url="#"
+          category="Crypto"
+          chapters="12"
+          backgroundImage="featuredImage.jpg"
+        />
+      </div>
+      <div id="courseShowcase">
+        <MoreCourseBlocks
+          title="NFT Crash Course"
+          preview="Learn the step-by-step process of creating, buying, and selling non-fungible tokens in the rapidly growing digital market, where artist and collectors are connecting in new and innovative ways."
+          url="#"
+          category="NFTs"
+          chapters="12"
+          backgroundImage="nftCourseImage.jpg"
+        />
 
-      <MoreCourseBlocks
-        title="Stock Market Crash Course"
-        preview="Discover the fundamentals of stock market investing, including strategies for selecting profitable stocks and building a diversified portfolio to maximize long-term returns."
-        url="#"
-        category="Stocks"
-        chapters="14"
-        backgroundImage="stocksCourseImage.jpg"
-      />
+        <MoreCourseBlocks
+          title="Stock Market Crash Course"
+          preview="Discover the fundamentals of stock market investing, including strategies for selecting profitable stocks and building a diversified portfolio to maximize long-term returns."
+          url="#"
+          category="Stocks"
+          chapters="14"
+          backgroundImage="stocksCourseImage.jpg"
+        />
+      </div>
     </div>
   </div>
 
@@ -194,6 +196,18 @@ import "../styles/global.css";
         align-items: center; /*Centers content vertically */
         flex-direction: column;
       }
+
+      #innerSectionMainContainer {
+        display:flex;
+        flex-direction:column;
+        }
+
+      #mainSectionCoursesContainer {
+        max-width: 650px;
+        margin-left:auto;
+        margin-right:auto;
+        
+      }
     }
 
     /* Large devices (laptops/desktops, 1400px and up) */
@@ -204,6 +218,7 @@ import "../styles/global.css";
         padding-left: 3.56rem;
         padding-right: 3.56rem;
         padding-bottom: 1.67rem;
+        max-width: 1400px;
       }
 
       #headingArea > h2 {
@@ -245,6 +260,16 @@ import "../styles/global.css";
         align-items: center; /*Centers content vertically */
         flex-direction: column;
       }
-    }
+
+      #innerSectionMainContainer {
+        display:flex;
+        flex-direction:column;
+        }
+           
+      #mainSectionCoursesContainer {
+        max-width: 1400px;
+        margin-left:auto;
+        margin-right:auto;
+      }
   </style>
 </div>
