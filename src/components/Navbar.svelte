@@ -50,10 +50,10 @@
                   {#each subMenuServices as { serviceName, serviceURL }, index}
                     <li>
                       <a
-                        title={name}
+                        title={serviceName}
                         class="dropbtn"
                         href={serviceURL}
-                        aria-label={serviceName}>{serviceName}</a
+                        aria-label={serviceName}>➤ {serviceName}</a
                       >
                     </li>
                   {/each}
@@ -81,36 +81,7 @@
           {/each}
         </ul>
       </nav>
-
-      <!--desktop nav start -->
-      <!-- <nav>
-        <a href="#">Home</a>
-        <a href="#">Reports</a>
-        <a href="#">CFR Academy</a>
-        <a href="#">Contact</a>
-        <a id="buttonArea1" href="#"><span class="buttonStyle1">Login</span></a>
-        <a id="buttonArea2" href="#"><span class="buttonStyle1">Sign up</span></a
-        >
-      </nav> -->
-      <!--desktop nav end -->
     </div>
-
-    <!--mobile nav start -->
-    <!-- <div class="hamburger-menu">
-      <input id="menu__toggle" type="checkbox" />
-      <label class="menu__btn" for="menu__toggle">
-        <span></span>
-      </label>
-      <ul class="menu__box">
-        <li><a class="menu__item" href="#">Home</a></li>
-        <li><a class="menu__item" href="#">Reports</a></li>
-        <li><a class="menu__item" href="#">CFR Academy</a></li>
-        <li><a class="menu__item" href="#">Contact</a></li>
-        <li><a class="menu__item" href="#">Login</a></li>
-        <li><a class="menu__item" href="#">Sign up</a></li>
-      </ul>
-    </div> -->
-    <!--mobile nav end -->
 
     <!--mobile nav start -->
     <div class="hamburger-menu">
@@ -118,15 +89,6 @@
       <label class="menu__btn" for="menu__toggle">
         <span></span>
       </label>
-      <!-- <ul class="menu__box">
-        <li><a class="menu__item" href="#">Home</a></li>
-        <li><a class="menu__item" href="#">Reports</a></li>
-        <li><a class="menu__item" href="#">CFR Academy</a></li>
-        <li><a class="menu__item" href="#">Contact</a></li>
-        <li><a class="menu__item" href="#">Login</a></li>
-        <li><a class="menu__item" href="#">Sign up</a></li>
-      </ul> -->
-
       <ul class="menu__box">
         {#each menuItemsNew as { name, url }, index}
           {#if name === "CFR Academy"}
@@ -882,24 +844,50 @@
       transition: color 0.3s ease;
     }
 
+    /*styling for hover item*/
     nav ul li ul {
+      margin: 0;
       display: none;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
       position: absolute;
-      left: 0;
-    }
-
-    nav ul li ul li {
-      width: 100%;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-      border-right: 1px solid rgba(255, 255, 255, 0.3);
-      border-left: 1px solid rgba(255, 255, 255, 0.3);
-      padding: 15px;
-      /* background-color: var(--complimentaryColor); */
+      /* background-color: blue; */
+      width: 400px;
+      height: 100px;
+      top:0.95rem;
     }
 
     nav ul li:hover ul {
-      display: block;
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      /* background-color: red; */
+      background-color: var(--primaryColor);
+      width: 400px;
+      height: 100px;
       z-index: 10;
+      top:0.95rem;
+      border-radius:6px;
+      border-color:#fff;
+      border-width:2px;
+      border-style:solid;
+    }
+
+    nav ul li ul li {
+      display: flex;
+      justify-content: center;
+      margin:0;
+      right:15px;
+      /* width: 100%;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      border-right: 1px solid rgba(255, 255, 255, 0.1);
+      border-left: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 15px;
+      background-color: #000; */
     }
   }
 </style>
