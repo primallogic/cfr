@@ -75,6 +75,7 @@ const BrandDetailsStore = writable([
         serviceImage: "#",
         serviceURL: "/courses/stock-course",
       },
+      
     ],
   },
 ]);

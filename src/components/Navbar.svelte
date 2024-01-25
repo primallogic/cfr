@@ -75,7 +75,7 @@
               </li>
             {:else}
               <li>
-                <a href={url} aria-label={name}>{name}</a>
+                <a title={name} href={url} aria-label={name}>{name}</a>
               </li>
             {/if}
           {/each}
@@ -123,7 +123,7 @@
 
 <style>
   /* Extra small devices (phones, 600px and down) */
-  @media only screen and (max-width: 600px) {
+ @media only screen and (max-width: 600px) {
     #mainNavContainer {
       display: flex;
       justify-content: space-between;
@@ -166,7 +166,7 @@
 
     nav {
       font-family: var(--primaryFontFamily);
-      padding-left: 1.8rem;
+      margin-left: 1.8rem;
       font-size: 0.89rem;
       font-weight: 400;
     }
@@ -174,7 +174,7 @@
     nav a {
       font-family: var(--primaryFontFamily);
       color: var(--secondaryColor);
-      padding-left: 1.8rem;
+      margin-left: 1.8rem;
       text-decoration: none;
       transition: color 0.3s ease;
     }
@@ -182,7 +182,7 @@
     nav a:visited {
       font-family: var(--primaryFontFamily);
       color: var(--secondaryColor);
-      padding-left: 1.8rem;
+      margin-left: 1.8rem;
       text-decoration: none;
       transition: color 0.3s ease;
     }
@@ -190,7 +190,7 @@
     nav a:hover {
       font-family: var(--primaryFontFamily);
       color: var(--complimentaryColor);
-      padding-left: 1.8rem;
+      margin-left: 1.8rem;
       text-decoration: none;
       transition: color 0.3s ease;
     }
@@ -198,7 +198,7 @@
     nav a:active {
       font-family: var(--primaryFontFamily);
       color: var(--complimentaryColor);
-      padding-left: 1.8rem;
+      margin-left: 1.8rem;
       text-decoration: none;
       transition: color 0.3s ease;
     }
@@ -348,7 +348,7 @@
 
     nav {
       font-family: var(--primaryFontFamily);
-      padding-left: 1.8rem;
+      margin-left: 1.8rem;
       font-size: 0.89rem;
       font-weight: 400;
     }
@@ -356,7 +356,7 @@
     nav a {
       font-family: var(--primaryFontFamily);
       color: var(--secondaryColor);
-      padding-left: 1.8rem;
+      margin-left: 1.8rem;
       text-decoration: none;
       transition: color 0.3s ease;
     }
@@ -364,7 +364,7 @@
     nav a:visited {
       font-family: var(--primaryFontFamily);
       color: var(--secondaryColor);
-      padding-left: 1.8rem;
+      margin-left: 1.8rem;
       text-decoration: none;
       transition: color 0.3s ease;
     }
@@ -372,7 +372,7 @@
     nav a:hover {
       font-family: var(--primaryFontFamily);
       color: var(--complimentaryColor);
-      padding-left: 1.8rem;
+      margin-left: 1.8rem;
       text-decoration: none;
       transition: color 0.3s ease;
     }
@@ -380,7 +380,7 @@
     nav a:active {
       font-family: var(--primaryFontFamily);
       color: var(--complimentaryColor);
-      padding-left: 1.8rem;
+      margin-left: 1.8rem;
       text-decoration: none;
       transition: color 0.3s ease;
     }
@@ -513,7 +513,7 @@
 
     nav {
       font-family: var(--primaryFontFamily);
-      padding-left: 1.8rem;
+      margin-left: 1.8rem;
       font-size: 0.89rem;
       font-weight: 400;
     }
@@ -521,7 +521,7 @@
     nav a {
       font-family: var(--primaryFontFamily);
       color: var(--secondaryColor);
-      padding-left: 1.8rem;
+      margin-left: 1.8rem;
       text-decoration: none;
       transition: color 0.3s ease;
     }
@@ -529,7 +529,7 @@
     nav a:visited {
       font-family: var(--primaryFontFamily);
       color: var(--secondaryColor);
-      padding-left: 1.8rem;
+      margin-left: 1.8rem;
       text-decoration: none;
       transition: color 0.3s ease;
     }
@@ -537,7 +537,7 @@
     nav a:hover {
       font-family: var(--primaryFontFamily);
       color: var(--complimentaryColor);
-      padding-left: 1.8rem;
+      margin-left: 1.8rem;
       text-decoration: none;
       transition: color 0.3s ease;
     }
@@ -545,7 +545,7 @@
     nav a:active {
       font-family: var(--primaryFontFamily);
       color: var(--complimentaryColor);
-      padding-left: 1.8rem;
+      margin-left: 1.8rem;
       text-decoration: none;
       transition: color 0.3s ease;
     }
@@ -681,83 +681,7 @@
       margin-right: -0.9rem;
     }
 
-    /*mobile nav styling start*/
-    #menu__toggle {
-      opacity: 0;
-    }
-    #menu__toggle:checked + .menu__btn > span {
-      transform: rotate(45deg);
-    }
-    #menu__toggle:checked + .menu__btn > span::before {
-      top: 0;
-      transform: rotate(0deg);
-    }
-    #menu__toggle:checked + .menu__btn > span::after {
-      top: 0;
-      transform: rotate(90deg);
-    }
-    #menu__toggle:checked ~ .menu__box {
-      /* left: 0 !important; */
-      right: 0px !important;
-    }
-    .menu__btn {
-      position: fixed;
-      top: 35px;
-      /* left: 20px; */
-      width: 26px;
-      height: 26px;
-      cursor: pointer;
-      z-index: 1;
-    }
-    .menu__btn > span,
-    .menu__btn > span::before,
-    .menu__btn > span::after {
-      display: block;
-      position: absolute;
-      width: 100%;
-      height: 2px;
-      background-color: var(--complimentaryColor);
-      transition-duration: 0.25s;
-    }
-    .menu__btn > span::before {
-      content: "";
-      top: -8px;
-    }
-    .menu__btn > span::after {
-      content: "";
-      top: 8px;
-    }
-    .menu__box {
-      display: block;
-      position: fixed;
-      top: 0;
-      /* left: -100%; */
-      right: -100%;
-      width: 300px;
-      height: 100%;
-      margin: 0;
-      padding: 80px 0;
-      list-style: none;
-      background-color: rgba(0, 0, 0, 0.9);
-      box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
-      transition-duration: 0.25s;
-    }
-    .menu__item {
-      font-family: var(--primaryFontFamily);
-      display: block;
-      padding: 12px 24px;
-      color: var(--secondaryColor);
-      font-size: 1rem;
-      font-weight: 400;
-      text-decoration: none;
-      transition-duration: 0.25s;
-      line-height: 150%;
-    }
-    .menu__item:hover {
-      background-color: var(--primaryColor);
-      color: var(--complimentaryColor);
-    }
-    /*mobile nav styling end*/
+   
 
     .hamburger-menu {
       display: none;
@@ -772,9 +696,10 @@
       font-weight: 600;
       text-align: center;
       font-family: var(--primaryFontFamily);
-      padding-left: 1.8rem;
+      margin-left: 1.8rem;
       font-size: 0.89rem;
       font-weight: 400;
+      white-space: nowrap;
     }
 
     nav ul {
@@ -782,9 +707,10 @@
       font-weight: 600;
       text-align: center;
       font-family: var(--primaryFontFamily);
-      padding-left: 1.8rem;
+      margin-left: 1.8rem;
       font-size: 0.89rem;
       font-weight: 400; */
+      white-space: nowrap;
     }
 
     nav ul li {
@@ -798,64 +724,79 @@
       transform: rotate(90deg);
       /* margin-right: 0.5rem;
       margin-left:0.4rem; */
+      white-space: nowrap;
     } /* Change this in order to change the Dropdown symbol */
 
     li > a:only-child:after {
       content: "";
+      white-space: nowrap;
     }
 
     nav ul li a {
       font-family: var(--primaryFontFamily);
       color: var(--secondaryColor);
-      padding-left: 1.8rem;
+      margin-left: 1.8rem;
       text-decoration: none;
       transition: color 0.3s ease;
+      white-space: nowrap;
     }
 
     nav ul li a {
       font-family: var(--primaryFontFamily);
       color: var(--secondaryColor);
-      padding-left: 1.8rem;
+      margin-left: 1.8rem;
       text-decoration: none;
       transition: color 0.3s ease;
+      white-space: nowrap;
     }
 
     nav ul li a:active {
       font-family: var(--primaryFontFamily);
       color: var(--secondaryColor);
-      padding-left: 1.8rem;
+      margin-left: 1.8rem;
       text-decoration: none;
       transition: color 0.3s ease;
+      white-space: nowrap;
     }
 
     nav ul li a:visited {
       font-family: var(--primaryFontFamily);
       color: var(--secondaryColor);
-      padding-left: 1.8rem;
+      margin-left: 1.8rem;
       text-decoration: none;
       transition: color 0.3s ease;
+      white-space: nowrap;
     }
 
     nav ul li a:hover {
       font-family: var(--primaryFontFamily);
       color: var(--complimentaryColor);
-      padding-left: 1.8rem;
+      margin-left: 1.8rem;
       text-decoration: none;
       transition: color 0.3s ease;
+      white-space: nowrap;
     }
 
     /*styling for hover item*/
-    nav ul li ul {
+     nav ul li ul {
       margin: 0;
       display: none;
       flex-direction: row;
       justify-content: center;
       align-items: center;
+      padding-right:25px;
       position: absolute;
-      /* background-color: blue; */
-      width: 400px;
+      background-color: var(--primaryColor);
       height: 100px;
-      top:0.95rem;
+      z-index: 10;
+      top:15px;
+      margin-left:-100px;
+      border-radius:6px;
+      border-color:#fff;
+      border-width:2px;
+      border-style:solid;
+      white-space: nowrap;
+      
     }
 
     nav ul li:hover ul {
@@ -864,30 +805,28 @@
       flex-direction: row;
       justify-content: center;
       align-items: center;
+      padding-right:25px;
       position: absolute;
-      /* background-color: red; */
       background-color: var(--primaryColor);
-      width: 400px;
       height: 100px;
       z-index: 10;
-      top:0.95rem;
+      top:15px;
+      margin-left:-100px;
       border-radius:6px;
       border-color:#fff;
       border-width:2px;
       border-style:solid;
+      white-space: nowrap;
     }
 
+   
+
     nav ul li ul li {
-      display: flex;
-      justify-content: center;
       margin:0;
-      right:15px;
-      /* width: 100%;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      border-right: 1px solid rgba(255, 255, 255, 0.1);
-      border-left: 1px solid rgba(255, 255, 255, 0.1);
-      padding: 15px;
-      background-color: #000; */
-    }
+      white-space: nowrap;
+   }
+
+  
+
   }
 </style>
