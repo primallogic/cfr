@@ -57,6 +57,7 @@ const BrandDetailsStore = writable([
         name: "Sign up",
         url: "/sign-up",
       },
+      ``
     ],
 
     serviceListName: [

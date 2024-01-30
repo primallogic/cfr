@@ -10,11 +10,50 @@ import adobeLogo from "../images/Adobe.svg";
 import nftLogo from "../images/Nft.svg";
 import ethereumLogo from "../images/Ethereum.svg";
 import microsoftLogo from "../images/Microsoft.svg";
-
 import "../styles/global.css";
+
+
+
+
 ---
 
-<div id="mainSectionLogosContainer">
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    console.log("DOM fully loaded and parsed");
+    
+    const targetElement = document.querySelector('#innerSectionContainer');
+
+    if (targetElement) {
+      console.log("Target element found:", targetElement);
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          console.log("Observing:", entry);
+          if (entry.isIntersecting) {
+            console.log("Element is in view");
+            entry.target.classList.add('animate__animated', 'animate__jackInTheBox');
+          } else {
+            // console.log("Element is not in view");
+            entry.target.classList.remove('animate__animated', 'animate__jackInTheBox');
+          }
+        });
+      }, {
+        root: null, 
+        rootMargin: '0px',
+        threshold: 0.5 // Adjusted threshold
+      });
+
+      observer.observe(targetElement);
+    } else {
+      console.log("Target element not found");
+    }
+  });
+</script>
+
+
+
+<div id="mainSectionLogosContainer" >
   <div id="headingArea">
     <h2>Riding the Wave of Top-Tier Digital Wealth Assets!</h2>
   </div>
